@@ -16,9 +16,11 @@ export const MongoHelper = {
     },
 
     map(collection: any): any {
+        const { _id, ...obj } = collection
+
         return {
-            id: collection._id.toHexString(),
-            ...collection
+            id: _id.toHexString(),
+            ...obj
         }
     }
 }
