@@ -16,7 +16,7 @@ describe('SignUp Routes', () => {
         await MongoHelper.disconnect()
     })
 
-    test('Should return an account os success', async () => {
+    test('Should return an account on success', async () => {
         await request(app)
             .post('/api/signup')
             .send({
